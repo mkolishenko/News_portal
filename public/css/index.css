@@ -1,0 +1,21 @@
+main.index {
+    margin-top: 20px;
+}
+
+main.index .main-post {
+    width: 82%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+main.index .main-post .post-image {
+    margin: 0;
+    width: 600px;
+    margin-right: 20px;
+    float: left;
+}
+
+.card .card-body .card-text {
+    height: 130px;
+}
