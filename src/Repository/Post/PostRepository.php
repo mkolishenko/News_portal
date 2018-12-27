@@ -27,6 +27,7 @@ class PostRepository extends ServiceEntityRepository implements PostRepositoryIn
     public function findAllWithCategories()
     {
         return $this->createQueryBuilder('p')
+            ->andWhere('p.publicationDate is not null')
             ->innerJoin('p.category', 'c')
             ->addSelect('c')
             ->getQuery()
