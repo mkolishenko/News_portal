@@ -45,7 +45,7 @@ class Post
     /**
      * @ORM\Column(type="datetime")
      */
-    public $publicationDate;
+    private $publicationDate;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -118,7 +118,7 @@ class Post
         return $this;
     }
 
-    public function getPublication_Date(): ?\DateTimeInterface
+    public function getPublicationDate(): ?\DateTimeInterface
     {
         return $this->publicationDate;
     }
