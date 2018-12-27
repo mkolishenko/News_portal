@@ -52,6 +52,7 @@ class Post
      */
     private $image;
 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -140,4 +141,5 @@ class Post
 
         return $this;
     }
+
 }

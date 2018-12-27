@@ -8,14 +8,13 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20181226203129 extends AbstractMigration
+final class Version20181227093136 extends AbstractMigration
 {
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE category ADD description VARCHAR(255) DEFAULT NULL');
         $this->addSql('ALTER TABLE post ADD short_description VARCHAR(255) DEFAULT NULL, ADD publication_date DATETIME NOT NULL, ADD image VARCHAR(255) DEFAULT NULL');
     }
 
@@ -24,7 +23,6 @@ final class Version20181226203129 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE category DROP description');
         $this->addSql('ALTER TABLE post DROP short_description, DROP publication_date, DROP image');
     }
 }

@@ -43,6 +43,7 @@ class Category
      */
     private $description;
 
+
     public function __construct()
     {
         $this->posts = new ArrayCollection();
@@ -131,4 +132,5 @@ class Category
 
         return $this;
     }
+
 }
